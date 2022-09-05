@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria Via de la Plata</title>
+    <meta name="description" content="Pagina cafeteria clinica via de la plata">
+    <!--prefetch-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    
+   
+    <!--preload-->
+
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    
 </head>
 <body>
 
@@ -41,7 +53,11 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="imagen/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
+                    
                 </div>
 
                 <div class="entrada__contenido">
@@ -54,7 +70,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/pan.jpg" alt="imagen blog">
+                    <img loading="lazy" src="img/pan.jpg" alt="imagen blog">
                 </div>
 
                 <div class="entrada__contenido">
@@ -67,7 +83,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/dulces.jpg" alt="imagen blog">
+                    <img loading="lazy" src="img/dulces.jpg" alt="imagen blog">
                 </div>
 
                 <div class="entrada__contenido">
@@ -98,6 +114,6 @@
         </div>
 
     </footer>
-    
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
